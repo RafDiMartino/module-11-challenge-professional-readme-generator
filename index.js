@@ -12,7 +12,7 @@ inquirer.prompt([
         // validate: (answer) => {
         //     answer === "" ? console.log("Enter a valid title for your project") : true;
         // }
-        validate: function (answer) {
+        validate: (answer) => {
             if (answer === "") {
                 return console.log("Enter a valid title for your project");
             }
@@ -23,7 +23,7 @@ inquirer.prompt([
         type: 'input',
         name: 'description',
         message: 'Enter your project description?',
-        validate: function (answer) {
+        validate: (answer) => {
             if (answer === "") {
                 return console.log("Enter a valid project description");
             }
@@ -34,7 +34,7 @@ inquirer.prompt([
         type: 'input',
         name: 'installation',
         message: 'What are the installation instructions?',
-        validate: function (answer) {
+        validate: (answer) => {
             if (answer === "") {
                 return console.log("Enter valid installation instructions");
             }
@@ -45,7 +45,7 @@ inquirer.prompt([
         type: 'input',
         name: 'usage',
         message: 'What are the usage instructions?',
-        validate: function (answer) {
+        validate: (answer) => {
             if (answer === "") {
                 return console.log("Enter valid usage instructions");
             }
@@ -69,7 +69,7 @@ inquirer.prompt([
         type: 'input',
         name: 'contributing',
         message: 'Enter contributions instuctions',
-        validate: function (answer) {
+        validate: (answer) => {
             if (answer === "") {
                 return console.log("Enter valid contributions instructions");
             }
@@ -80,7 +80,7 @@ inquirer.prompt([
         type: 'input',
         name: 'tests',
         message: 'Provide the test for your application',
-        validate: function (answer) {
+        validate: (answer) => {
             if (answer === "") {
                 return console.log("Enter valid tests instructions");
             }
@@ -91,7 +91,7 @@ inquirer.prompt([
         type: 'input',
         name: 'questions',
         message: 'Enter an email address for a user to reach out if they have a question',
-        validate: function (answer) {
+        validate: (answer) => {
             if (answer === "") {
                 return console.log("Enter a valid email address");
             }
@@ -99,7 +99,7 @@ inquirer.prompt([
         }
     },
 
-    ]).then((data)=> {
+    ]).then((data) => {
 
 
     writeToFile("README.MD", data)

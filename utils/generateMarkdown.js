@@ -7,6 +7,7 @@ function generateMarkdown(data) {
   ${data.description}
   
   ${data.licenseBadge}
+
   ## Table of content
   * [Installation](#installation)
   * [Usage](#usage)
@@ -28,10 +29,14 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions
-  ${data.questions}
+  If you have any questions about the project please contact me on:
+   * GitHub: [${data.github}](https://github.com/${data.github})
+   * Email: ${data.email}
 
   ## License
-  ${data.license}
+  Click on the badge to read about the type of license this project is under
+  
+  ${data.licenseBadge}
 `;
 }
 

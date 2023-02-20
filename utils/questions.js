@@ -47,7 +47,7 @@ const questions = [
     {
         type: 'list',
         name: 'license',
-        message: 'Select the license Type for this project',
+        message: 'Select the license type for this project',
         choices: [
             "MIT license", 
             "Apache License 2.0", 
@@ -60,7 +60,7 @@ const questions = [
     {
         type: 'input',
         name: 'contributing',
-        message: 'Enter contributions instuctions',
+        message: 'Enter contributions instuctions:',
         validate: (answer) => {
             if (answer === "") {
                 return console.log("Enter valid contributions instructions");
@@ -71,7 +71,7 @@ const questions = [
     {
         type: 'input',
         name: 'tests',
-        message: 'Provide the test for your application',
+        message: 'Provide the test descriptions for your application',
         validate: (answer) => {
             if (answer === "") {
                 return console.log("Enter valid tests instructions");
@@ -81,7 +81,18 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'questions',
+        name: 'github',
+        message: 'Enter your github profile username',
+        validate: (answer) => {
+            if (answer === "") {
+                return console.log("Enter a valid github profile username");
+            }
+            return true;
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
         message: 'Enter an email address for a user to reach out if they have a question',
         validate: (answer) => {
             if (answer === "") {

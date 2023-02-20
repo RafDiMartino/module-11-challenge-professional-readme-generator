@@ -5,7 +5,8 @@ function generateMarkdown(data) {
   
   ## Description
   ${data.description}
-
+  
+  ${data.licenseBadge}
   ## Table of content
   * [Installation](#installation)
   * [Usage](#usage)

@@ -2,6 +2,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 const questions = require("./utils/questions")
+const licenseBadge = require("./utils/generateBadges");
 
 // function to write README file
 function writeToFile(answers) {
@@ -13,7 +14,9 @@ function writeToFile(answers) {
 async function init() {
     try {
       const answers = await inquirer.prompt(questions);
+      answers.licenseBadge = licenseBadge(answers.license);
       writeToFile(answers)
+      
     }catch (err) { 
         throw err;
     }

@@ -18,6 +18,7 @@ async function init() {
     try {
       const answers = await inquirer.prompt(questions);
       answers.licenseBadge = licenseBadge(answers.license);
+      console.log("Success! You README.md file has been generated in the generated-files folder")
       writeToFile(answers)
       
     }catch (err) { 

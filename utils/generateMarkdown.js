@@ -8,7 +8,7 @@ function generateMarkdown(data) {
   
   ${data.licenseBadge}
 
-  ## Table of content
+  ## Table of contents
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contributing](#contributing)

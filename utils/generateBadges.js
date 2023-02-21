@@ -19,4 +19,4 @@ function licenseBadge(value) {
 
 }
   
-module.exports = licenseBadge;
+export { licenseBadge };

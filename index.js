@@ -1,8 +1,8 @@
-const fs = require("fs");
-const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown");
-const questions = require("./utils/questions")
-const licenseBadge = require("./utils/generateBadges");
+import fs from "node:fs";
+import inquirer from "inquirer";
+import { generateMarkdown } from "./utils/generateMarkdown.js";
+import { questions } from "./utils/questions.js";
+import { licenseBadge } from "./utils/generateBadges.js";
 
 // function to write README file
 function writeToFile(answers) {
@@ -10,7 +10,7 @@ function writeToFile(answers) {
     fs.mkdir("./generated-files", { recursive: true }, (err) => {if (err) throw err;})
     
     // generate a new markdown file 
-    fs.writeFile(__dirname + `/generated-files/README.md`, generateMarkdown(answers), (err) => err && console.error(err));
+    fs.writeFile(`./generated-files/README.md`, generateMarkdown(answers), (err) => err ? console.error(err) : console.log("Success! You README.md file has been generated in the generated-files folder"));
 }   
 
 // async function to initialise the program
@@ -18,7 +18,6 @@ async function init() {
     try {
       const answers = await inquirer.prompt(questions);
       answers.licenseBadge = licenseBadge(answers.license);
-      console.log("Success! You README.md file has been generated in the generated-files folder")
       writeToFile(answers)
       
     }catch (err) { 

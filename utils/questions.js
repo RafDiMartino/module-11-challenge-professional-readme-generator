@@ -1,4 +1,4 @@
-// array of questions for user
+// array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -103,4 +103,4 @@ const questions = [
     },
 ];
 
-module.exports = questions;
+export { questions };

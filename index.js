@@ -6,7 +6,10 @@ const licenseBadge = require("./utils/generateBadges");
 
 // function to write README file
 function writeToFile(answers) {
+    // greate anew dir if there isn't one
     fs.mkdir("./generated-files", { recursive: true }, (err) => {if (err) throw err;})
+    
+    // generate a new markdown file 
     fs.writeFile(__dirname + `/generated-files/README.md`, generateMarkdown(answers), (err) => err && console.error(err));
 }   
 

@@ -1,4 +1,4 @@
-// This function will determine badges based on license selection.
+// This function will generate badges based on license selection.
 function licenseBadge(value) {
 
     if (value === "MIT license") {
@@ -16,7 +16,7 @@ function licenseBadge(value) {
     } else {
         return;
     }
-    
+
 }
   
 module.exports = licenseBadge;

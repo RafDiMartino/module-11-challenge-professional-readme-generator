@@ -3,7 +3,7 @@
 
 In this challenge I created a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer.js](https://www.npmjs.com/package/inquirer) package, the application is built in node.js and uses ES6 sintax.
 
-## Table of content
+## Table of contents
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
